@@ -8,7 +8,7 @@ GO_FILES := $(shell find . -name '*.go' | grep -v /vendor/ | grep -v _test.go)
 all: build
 
 build: dep
-	go build -i -o build/main $(PKG)
+	go build -o build/main $(PKG)
 
 dep:
 	go mod download
